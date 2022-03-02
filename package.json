@@ -1,0 +1,28 @@
+{
+  "name": "@powerfulyang/cli",
+  "version": "0.0.1",
+  "description": "cli tools",
+  "main": "src/index.mts",
+  "bin": "./index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/powerfulyang/cli.git"
+  },
+  "author": "powerfulyang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/powerfulyang/cli/issues"
+  },
+  "homepage": "https://github.com/powerfulyang/cli#readme",
+  "devDependencies": {
+    "@powerfulyang/lint": "^0.7.11",
+    "typescript": "^4.7.0-dev.20220302"
+  },
+  "dependencies": {
+    "zx": "^5.2.0"
+  }
+}
