@@ -34,8 +34,6 @@ const showVersion = () => {
   console.log(yellow(version));
 };
 
-const name = await $`cat package.json | grep "name"`;
-console.log(red(`running in package ${name}`));
 
 switch (command) {
   case '-h': {

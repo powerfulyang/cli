@@ -1,6 +1,6 @@
 {
   "name": "@powerfulyang/cli",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "cli tools",
   "main": "src/index.mts",
   "files": [
@@ -9,7 +9,9 @@
     "dist"
   ],
   "scripts": {
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "patch-version": "npm version patch --no-git-tag-version",
+    "prepublishOnly": "tsc"
   },
   "publishConfig": {
     "access": "public"
