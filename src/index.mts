@@ -1,9 +1,11 @@
 #!/usr/bin/env node
-import { chalk } from 'zx';
+import { chalk, $ } from 'zx';
 import { readFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { linterInit } from './linter/index.mjs';
+
+$.verbose = false;
 
 const args = process.argv;
 const [, , command] = args;
@@ -31,6 +33,9 @@ const showVersion = () => {
   const { version } = JSON.parse(pkg);
   console.log(yellow(version));
 };
+
+const name = await $`cat package.json | grep "name"`;
+console.log(red(`running in package ${name}`));
 
 switch (command) {
   case '-h': {

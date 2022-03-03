@@ -3,10 +3,27 @@
   "version": "0.0.1",
   "description": "cli tools",
   "main": "src/index.mts",
-  "bin": "./index.mjs",
+  "files": [
+    "src",
+    "template",
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "precommit": "lint-staged"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "pyc": "./dist/index.mjs"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "types": "./dist/index.d.ts",
   "type": "module",
   "repository": {
     "type": "git",
