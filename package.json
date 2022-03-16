@@ -1,6 +1,6 @@
 {
   "name": "@powerfulyang/cli",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "cli tools",
   "main": "src/index.mts",
   "files": [
@@ -38,10 +38,10 @@
   },
   "homepage": "https://github.com/powerfulyang/cli#readme",
   "devDependencies": {
-    "@powerfulyang/lint": "^0.7.11",
+    "@powerfulyang/lint": "^0.7.13",
     "typescript": "^4.7.0-dev.20220302"
   },
   "dependencies": {
-    "zx": "^5.2.0"
+    "zx": "^6.0.1"
   }
 }
