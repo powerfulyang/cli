@@ -10,3 +10,4 @@
 + lint-staged
 + .editorconfig
 + .gitattributes
++ renovate

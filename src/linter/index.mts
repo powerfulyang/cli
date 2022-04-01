@@ -75,4 +75,12 @@ export const linterInit = () => {
   } else {
     console.log(yellow('.lintstagedrc already exists!'));
   }
+
+  const renovateJsonPath = join(dir, 'renovate.json');
+  if (!fs.existsSync(renovateJsonPath)) {
+    const data = fs.readFileSync(getTemplateFilePath('renovate.json.template'));
+    fs.writeFileSync(renovateJsonPath, data);
+  } else {
+    console.log(yellow('renovate.json already exists!'));
+  }
 };
