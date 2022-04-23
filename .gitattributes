@@ -13,3 +13,7 @@
 *.scss text eol=lf
 *.js text eol=lf
 *.json text eol=lf
+*.cjs text eol=lf
+*.template text eol=lf
+*.mts text eol=lf
+*.md text eol=lf

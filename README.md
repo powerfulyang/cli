@@ -1,13 +1,30 @@
 # cli
 
-主要包含以下命令：
-+ `@powerfulyang/cli linter-init`
+## Installation
 
-## `npx pyc linter-init`  初始化 code quality
-+ eslint
-+ prettier
-+ stylelint
-+ lint-staged
-+ .editorconfig
-+ .gitattributes
-+ renovate
+```bash
+npm i -g @powerfulyang/cli
+```
+
+init code quality check
+
+```bash
+pyc linter-init
+```
+
+## Use npx
+
+```bash
+npx @powerfulyang/cli linter-init
+```
+
+## Include
+
+- eslint
+- prettier
+- stylelint
+- lint-staged
+- .editorconfig
+- .gitattributes
+- renovate
+- commitlint

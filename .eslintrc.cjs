@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const { eslint } = require('@powerfulyang/lint');
 
 module.exports = {
@@ -5,6 +6,5 @@ module.exports = {
   rules: {
     ...eslint.rules,
     'no-console': 'off',
-    'import/no-unresolved': 'off',
   },
 };

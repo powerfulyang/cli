@@ -3,6 +3,7 @@ import { chalk, $ } from 'zx';
 import { readFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+// eslint-disable-next-line import/no-unresolved
 import { linterInit } from './linter/index.mjs';
 
 $.verbose = false;
@@ -16,7 +17,7 @@ const { green, red, yellow } = chalk;
 
 const showHelp = () => {
   console.log(`
-  Usage: @powerfulyang/cli ${green('<command>')} [options]
+  Usage: pyc ${green('<command>')} [options]
 
   Commands:
     ${green('-v, --version')}  Show the version number.
@@ -24,7 +25,7 @@ const showHelp = () => {
     ${green('linter-init')}    Init project linter.
 
   Example usage:
-    ${red('@powerfulyang/cli')} ${green('linter-init')}     # 初始化项目 linter
+    ${red('pyc')} ${green('linter-init')}     # 初始化项目 linter
   `);
 };
 
@@ -33,7 +34,6 @@ const showVersion = () => {
   const { version } = JSON.parse(pkg);
   console.log(yellow(version));
 };
-
 
 switch (command) {
   case '-h': {

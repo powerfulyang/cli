@@ -1,6 +1,7 @@
 import { join } from 'path';
 import fs from 'fs';
 import { chalk } from 'zx';
+// eslint-disable-next-line import/no-unresolved
 import { WORK_DIR } from '../index.mjs';
 
 export const linterInit = () => {
@@ -50,6 +51,15 @@ export const linterInit = () => {
     fs.writeFileSync(stylelintrcPath, data);
   } else {
     console.log(yellow(`${stylelintrcFileName} already exists!`));
+  }
+
+  const commitlintrcFileName = isEsModule ? '.commitlintrc.cjs' : '.commitlintrc.js';
+  const commitlintrcPath = join(dir, commitlintrcFileName);
+  if (!fs.existsSync(commitlintrcPath)) {
+    const data = fs.readFileSync(getTemplateFilePath('.commitlintrc.js.template'));
+    fs.writeFileSync(commitlintrcPath, data);
+  } else {
+    console.log(yellow(`${commitlintrcFileName} already exists!`));
   }
 
   const editorconfigPath = join(dir, '.editorconfig');
