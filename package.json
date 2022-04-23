@@ -1,6 +1,6 @@
 {
   "name": "@powerfulyang/cli",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "cli tools",
   "files": [
     "template",
