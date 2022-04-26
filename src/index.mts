@@ -1,17 +1,14 @@
 #!/usr/bin/env node
-import { chalk, $ } from 'zx';
+import { $, chalk } from 'zx';
 import { readFileSync } from 'fs';
-import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
-// eslint-disable-next-line import/no-unresolved
+import { resolve } from 'path';
 import { linterInit } from './linter/index.mjs';
+import { WORK_DIR } from './constant.mjs';
 
 $.verbose = false;
 
 const args = process.argv;
 const [, , command] = args;
-
-export const WORK_DIR = dirname(resolve(fileURLToPath(import.meta.url), '..'));
 
 const { green, red, yellow } = chalk;
 

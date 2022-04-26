@@ -7,10 +7,11 @@
     "dist"
   ],
   "scripts": {
-    "prepare": "husky install",
+    "postprepare": "husky install",
     "ts-check": "tsc --noEmit",
     "precommit": "npm run ts-check && lint-staged",
-    "build": "rimraf dist && tsc",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
     "prepublishOnly": "npm run build"
   },
   "publishConfig": {
@@ -31,8 +32,8 @@
   },
   "homepage": "https://github.com/powerfulyang/cli#readme",
   "devDependencies": {
-    "@powerfulyang/lint": "1.0.1",
-    "typescript": "4.7.0-dev.20220423"
+    "@powerfulyang/lint": "1.1.3",
+    "typescript": "4.7.0-dev.20220426"
   },
   "dependencies": {
     "zx": "6.1.0"

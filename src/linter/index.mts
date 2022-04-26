@@ -1,8 +1,7 @@
 import { join } from 'path';
 import fs from 'fs';
 import { chalk } from 'zx';
-// eslint-disable-next-line import/no-unresolved
-import { WORK_DIR } from '../index.mjs';
+import { WORK_DIR } from '../constant.mjs';
 
 export const linterInit = () => {
   const { yellow } = chalk;
