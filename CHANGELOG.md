@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/powerfulyang/cli/compare/v1.0.0...v1.1.0) (2022-04-26)
+
+
+### Features
+
+* 将优雅进行到底，基础组件更新 ([9772370](https://github.com/powerfulyang/cli/commit/97723700fbcb6d24cc704b71092c09768794e9da))
+
 ## 1.0.0 (2022-04-23)
 
 
