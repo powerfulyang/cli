@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/powerfulyang/cli/compare/v1.1.0...v1.2.0) (2022-05-01)
+
+
+### Features
+
+* new version linter ([bf7fb09](https://github.com/powerfulyang/cli/commit/bf7fb09a7809f15bff387a1f886ac27fdc584be4))
+
 ## [1.1.0](https://github.com/powerfulyang/cli/compare/v1.0.0...v1.1.0) (2022-04-26)
 
 
