@@ -15,9 +15,9 @@ module.exports = {
         'ignorePackages',
         {
           mjs: 'always',
+          mts: 'never',
         },
       ],
-      'import/no-unresolved': [2, { ignore: ['\\.mjs$'] }],
     },
   })),
 };

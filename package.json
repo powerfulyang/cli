@@ -32,8 +32,7 @@
   },
   "homepage": "https://github.com/powerfulyang/cli#readme",
   "devDependencies": {
-    "@powerfulyang/lint": "1.6.1",
-    "typescript": "4.7.2"
+    "@powerfulyang/lint": "2.0.2"
   },
   "dependencies": {
     "zx": "6.1.0"
