@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/powerfulyang/cli/compare/v1.2.0...v1.3.0) (2022-05-30)
+
+
+### Features
+
+* typescript@4.7 ([bc7723b](https://github.com/powerfulyang/cli/commit/bc7723b1cb8618b510c0aae8510440d38d2f4805))
+
 ## [1.2.0](https://github.com/powerfulyang/cli/compare/v1.1.0...v1.2.0) (2022-05-01)
 
 
