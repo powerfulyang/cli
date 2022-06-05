@@ -35,6 +35,6 @@
     "@powerfulyang/lint": "2.0.2"
   },
   "dependencies": {
-    "zx": "6.2.2"
+    "zx": "6.2.3"
   }
 }
