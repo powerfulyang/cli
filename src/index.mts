@@ -1,60 +1,20 @@
 #!/usr/bin/env node
-import { $, chalk } from 'zx';
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
-import { linterInit } from './linter/index.mjs';
-import { WORK_DIR } from './constant.mjs';
+import { $, fs } from 'zx';
+import { Command } from 'commander';
 
 $.verbose = false;
+const program = new Command();
+const pkgStr = fs.readFileSync('./package.json', 'utf8');
+const pkg = JSON.parse(pkgStr);
 
-const args = process.argv;
-const [, , command] = args;
+program
+  .name('us4ever')
+  .description(
+    `CLI to
+  1. generate project linter config
+  2. nest.js cli commands
+  `,
+  )
+  .version(pkg.version);
 
-const { green, red, yellow } = chalk;
-
-const showHelp = () => {
-  console.log(`
-  Usage: pyc ${green('<command>')} [options]
-
-  Commands:
-    ${green('-v, --version')}  Show the version number.
-    ${green('-h, --help')}     Show help.
-    ${green('linter-init')}    Init project linter.
-
-  Example usage:
-    ${red('pyc')} ${green('linter-init')}     # 初始化项目 linter
-  `);
-};
-
-const showVersion = () => {
-  const pkg = readFileSync(resolve(WORK_DIR, 'package.json'), 'utf-8');
-  const { version } = JSON.parse(pkg);
-  console.log(yellow(version));
-};
-
-switch (command) {
-  case '-h': {
-    showHelp();
-    break;
-  }
-  case '--help': {
-    showHelp();
-    break;
-  }
-  case '-v': {
-    showVersion();
-    break;
-  }
-  case '--version': {
-    showVersion();
-    break;
-  }
-  case 'linter-init': {
-    linterInit();
-    break;
-  }
-  default: {
-    showHelp();
-    process.exit(1);
-  }
-}
+program.parse();

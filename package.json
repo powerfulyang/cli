@@ -12,13 +12,14 @@
     "precommit": "npm run ts-check && lint-staged",
     "prebuild": "rimraf dist",
     "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "dev": "ts-node-esm src/index.mts"
   },
   "publishConfig": {
     "access": "public"
   },
   "bin": {
-    "pyc": "./dist/index.mjs"
+    "us4ever": "./dist/index.mjs"
   },
   "type": "module",
   "repository": {
@@ -32,9 +33,11 @@
   },
   "homepage": "https://github.com/powerfulyang/cli#readme",
   "devDependencies": {
-    "@powerfulyang/lint": "2.0.2"
+    "@powerfulyang/lint": "2.0.2",
+    "ts-node": "10.8.1"
   },
   "dependencies": {
+    "commander": "9.3.0",
     "zx": "6.2.5"
   }
 }
