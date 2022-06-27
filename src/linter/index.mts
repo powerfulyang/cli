@@ -1,95 +1,135 @@
 import { join } from 'path';
 import fs from 'fs';
-import { chalk } from 'zx';
+import inquirer from 'inquirer';
+import { getEnumKeys } from '@powerfulyang/utils';
+import type { Command } from 'commander';
+import { red, yellow } from '../utils/chalk.mjs';
 import { WORK_DIR } from '../constant.mjs';
 
-export const linterInit = () => {
-  const { yellow } = chalk;
+export enum LinterType {
+  ALL = 'all',
+  ESLINT = 'eslint',
+  PRETTIER = 'prettier',
+  STYLELINT = 'stylelint',
+  COMMITLINT = 'commitlint',
+  'LINT-STAGED' = 'lint-staged',
+  EDITORCONFIG = 'editorconfig',
+  GITATTRIBUTES = 'gitattributes',
+  GITIGNORE = 'gitignore',
+  RENOVATE = 'renovate',
+}
 
-  const dir = process.cwd();
-  const pkgPath = join(dir, 'package.json');
-  const isExist = fs.existsSync(pkgPath);
-  if (!isExist) {
-    console.error(yellow('package.json not found!'));
-    process.exit(1);
-  }
+export enum LinterFilename {
+  ESLINT = '.eslintrc.cjs',
+  PRETTIER = '.prettierrc.cjs',
+  STYLELINT = '.stylelintrc.cjs',
+  COMMITLINT = '.commitlintrc.cjs',
+  EDITORCONFIG = '.editorconfig',
+  'LINT-STAGED' = '.lintstagedrc.cjs',
+  GITATTRIBUTES = '.gitattributes',
+  GITIGNORE = '.gitignore',
+  RENOVATE = 'renovate.json',
+}
 
-  const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));
+const getFilename = (type: Uppercase<LinterType>) => {
+  return LinterFilename[type as unknown as keyof typeof LinterFilename];
+};
 
-  const isEsModule = pkg.type === 'module';
-
+const getTemplateFilePath = (type: Uppercase<LinterType>) => {
+  const filename = getFilename(type);
   const templateDir = join(WORK_DIR, 'template');
+  return join(templateDir, filename);
+};
 
-  const getTemplateFilePath = (name: string) => join(templateDir, name);
-
-  /**
-   * eslint
-   */
-  const eslintrcFileName = isEsModule ? '.eslintrc.cjs' : '.eslintrc.js';
-  const eslintrcPath = join(dir, eslintrcFileName);
-  if (!fs.existsSync(eslintrcPath)) {
-    const data = fs.readFileSync(getTemplateFilePath('.eslintrc.js.template'));
-    fs.writeFileSync(eslintrcPath, data);
+export const generateLinterConfig = (type: LinterType, force: boolean = false): void => {
+  const tmp = type.toUpperCase() as Uppercase<LinterType>;
+  const targetFilename = getFilename(tmp);
+  const dir = process.cwd();
+  const targetPath = join(dir, targetFilename);
+  if (!fs.existsSync(targetPath) || force) {
+    const data = fs.readFileSync(getTemplateFilePath(tmp));
+    fs.writeFileSync(targetPath, data);
   } else {
-    console.log(yellow(`${eslintrcFileName} already exists!`));
+    console.log(yellow(`${targetFilename} already exists!`));
   }
+};
 
-  const prettierrcFileName = isEsModule ? '.prettierrc.cjs' : '.prettierrc.js';
-  const prettierrcPath = join(dir, prettierrcFileName);
-  if (!fs.existsSync(prettierrcPath)) {
-    const data = fs.readFileSync(getTemplateFilePath('.prettierrc.js.template'));
-    fs.writeFileSync(prettierrcPath, data);
-  } else {
-    console.log(yellow(`${prettierrcFileName} already exists!`));
+export const linterInit = (type: LinterType, force: boolean = false) => {
+  switch (type) {
+    case LinterType.ESLINT:
+      generateLinterConfig(LinterType.ESLINT, force);
+      break;
+    case LinterType.PRETTIER:
+      generateLinterConfig(LinterType.PRETTIER, force);
+      break;
+    case LinterType.STYLELINT:
+      generateLinterConfig(LinterType.STYLELINT, force);
+      break;
+    case LinterType.COMMITLINT:
+      generateLinterConfig(LinterType.COMMITLINT, force);
+      break;
+    case LinterType.EDITORCONFIG:
+      generateLinterConfig(LinterType.EDITORCONFIG, force);
+      break;
+    case LinterType['LINT-STAGED']:
+      generateLinterConfig(LinterType['LINT-STAGED'], force);
+      break;
+    case LinterType.GITATTRIBUTES:
+      generateLinterConfig(LinterType.GITATTRIBUTES, force);
+      break;
+    case LinterType.GITIGNORE:
+      generateLinterConfig(LinterType.GITIGNORE, force);
+      break;
+    case LinterType.RENOVATE:
+      generateLinterConfig(LinterType.RENOVATE, force);
+      break;
+    case LinterType.ALL:
+      generateLinterConfig(LinterType.ESLINT, force);
+      generateLinterConfig(LinterType.PRETTIER, force);
+      generateLinterConfig(LinterType.STYLELINT, force);
+      generateLinterConfig(LinterType.COMMITLINT, force);
+      generateLinterConfig(LinterType.EDITORCONFIG, force);
+      generateLinterConfig(LinterType['LINT-STAGED'], force);
+      generateLinterConfig(LinterType.GITATTRIBUTES, force);
+      generateLinterConfig(LinterType.GITIGNORE, force);
+      generateLinterConfig(LinterType.RENOVATE, force);
+      break;
+    default:
+      console.log(red(`${String(type)} is not supported!`));
   }
+};
 
-  const stylelintrcFileName = isEsModule ? '.stylelintrc.cjs' : '.stylelintrc.js';
-  const stylelintrcPath = join(dir, stylelintrcFileName);
-  if (!fs.existsSync(stylelintrcPath)) {
-    const data = fs.readFileSync(getTemplateFilePath('.stylelintrc.js.template'));
-    fs.writeFileSync(stylelintrcPath, data);
-  } else {
-    console.log(yellow(`${stylelintrcFileName} already exists!`));
-  }
-
-  const commitlintrcFileName = isEsModule ? '.commitlintrc.cjs' : '.commitlintrc.js';
-  const commitlintrcPath = join(dir, commitlintrcFileName);
-  if (!fs.existsSync(commitlintrcPath)) {
-    const data = fs.readFileSync(getTemplateFilePath('.commitlintrc.js.template'));
-    fs.writeFileSync(commitlintrcPath, data);
-  } else {
-    console.log(yellow(`${commitlintrcFileName} already exists!`));
-  }
-
-  const editorconfigPath = join(dir, '.editorconfig');
-  if (!fs.existsSync(editorconfigPath)) {
-    const data = fs.readFileSync(getTemplateFilePath('.editorconfig.template'));
-    fs.writeFileSync(editorconfigPath, data);
-  } else {
-    console.log(yellow('.editorconfig already exists!'));
-  }
-
-  const gitattributesPath = join(dir, '.gitattributes');
-  if (!fs.existsSync(gitattributesPath)) {
-    const data = fs.readFileSync(getTemplateFilePath('.gitattributes.template'));
-    fs.writeFileSync(gitattributesPath, data);
-  } else {
-    console.log(yellow('.gitattributes already exists!'));
-  }
-
-  const lintstagedrcPath = join(dir, '.lintstagedrc');
-  if (!fs.existsSync(lintstagedrcPath)) {
-    const data = fs.readFileSync(getTemplateFilePath('.lintstagedrc.template'));
-    fs.writeFileSync(lintstagedrcPath, data);
-  } else {
-    console.log(yellow('.lintstagedrc already exists!'));
-  }
-
-  const renovateJsonPath = join(dir, 'renovate.json');
-  if (!fs.existsSync(renovateJsonPath)) {
-    const data = fs.readFileSync(getTemplateFilePath('renovate.json.template'));
-    fs.writeFileSync(renovateJsonPath, data);
-  } else {
-    console.log(yellow('renovate.json already exists!'));
-  }
+export const linterProgram = (program: Command) => {
+  program
+    .command('lint-init')
+    .description(
+      `init project linter config.\t${yellow('[type] e.g. all, eslint, prettier etc.')}\t${yellow(
+        '[options] e.g. --force, -f',
+      )}`,
+    )
+    .argument('[type]', 'init specify config, e.g. all, eslint, prettier etc.')
+    .option('-f, --force', 'force init config')
+    .action(async (type, options) => {
+      if (type) {
+        linterInit(type, options.force);
+      } else {
+        const res = await inquirer.prompt({
+          type: 'list',
+          name: 'type',
+          pageSize: 10,
+          message: 'init which config?',
+          choices: getEnumKeys(LinterType).map((key) => key.toLowerCase()),
+        });
+        if (options.force) {
+          linterInit(res.type, options.force);
+        } else {
+          const isForce = await inquirer.prompt({
+            type: 'confirm',
+            name: 'isForce',
+            message: `force init ${yellow(res.type)} config?`,
+          });
+          linterInit(res.type, isForce.isForce);
+        }
+      }
+    });
 };

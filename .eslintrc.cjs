@@ -10,6 +10,7 @@ module.exports = {
     ...override,
     rules: {
       ...override.rules,
+      'no-console': 'off',
       'import/extensions': [
         'error',
         'ignorePackages',

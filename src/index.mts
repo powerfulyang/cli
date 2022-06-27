@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 import { $, fs } from 'zx';
 import { Command } from 'commander';
+import { linterProgram } from './linter/index.mjs';
+import { blue, green } from './utils/chalk.mjs';
+import { nestProgram } from './nest/index.mjs';
 
 $.verbose = false;
 const program = new Command();
@@ -11,10 +14,13 @@ program
   .name('us4ever')
   .description(
     `CLI to
-  1. generate project linter config
-  2. nest.js cli commands
-  `,
+    ${blue('1. generate project linter config')}
+    ${green('2. nest.js cli commands')}
+        `,
   )
   .version(pkg.version);
+
+linterProgram(program);
+nestProgram(program);
 
 program.parse();
