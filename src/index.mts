@@ -15,7 +15,7 @@ program
   .description(
     `CLI to
     ${blue('1. generate project linter config')}
-    ${green('2. nest.js cli commands')}
+    ${green('2. nest.js cli generate commands')}
         `,
   )
   .version(`us4ever@${yellow(pkg.version)}`, '-v, --version', 'Output the current version.')

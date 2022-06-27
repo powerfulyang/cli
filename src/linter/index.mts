@@ -49,6 +49,9 @@ export const generateLinterConfig = (type: LinterType, force: boolean = false): 
   if (!fs.existsSync(targetPath) || force) {
     const data = fs.readFileSync(getTemplateFilePath(tmp));
     fs.writeFileSync(targetPath, data);
+    if (force) {
+      console.log(`%s is force generated!`, yellow(targetFilename));
+    }
   } else {
     console.log(yellow(`${targetFilename} already exists!`));
   }
@@ -102,6 +105,7 @@ export const linterInit = (type: LinterType, force: boolean = false) => {
 export const linterProgram = (program: Command) => {
   program
     .command('linter')
+    .alias('l')
     .description(`init project linter config.`)
     .argument('[type]', 'init specify config, e.g. all, eslint, prettier etc.')
     .option('-f, --force', 'force init config')
