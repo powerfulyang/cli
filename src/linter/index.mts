@@ -101,12 +101,8 @@ export const linterInit = (type: LinterType, force: boolean = false) => {
 
 export const linterProgram = (program: Command) => {
   program
-    .command('lint-init')
-    .description(
-      `init project linter config.\t${yellow('[type] e.g. all, eslint, prettier etc.')}\t${yellow(
-        '[options] e.g. --force, -f',
-      )}`,
-    )
+    .command('linter')
+    .description(`init project linter config.`)
     .argument('[type]', 'init specify config, e.g. all, eslint, prettier etc.')
     .option('-f, --force', 'force init config')
     .action(async (type, options) => {
