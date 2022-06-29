@@ -38,6 +38,7 @@
     "ts-node": "10.8.1"
   },
   "dependencies": {
+    "@nestjs/schematics": "^8.0.11",
     "@powerfulyang/utils": "1.4.4",
     "commander": "9.3.0",
     "inquirer": "9.0.0",
