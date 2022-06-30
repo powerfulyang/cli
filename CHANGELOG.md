@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.4.0](https://github.com/powerfulyang/cli/compare/v1.3.1...v1.4.0) (2022-06-30)
+
+
+### Features
+
+* nest generate ([ea7b9c4](https://github.com/powerfulyang/cli/commit/ea7b9c41a82b2ba459b5e3449f88950db6c77d0b))
+
+
+### Bug Fixes
+
+* command name ([5939f96](https://github.com/powerfulyang/cli/commit/5939f9665e9f1e38ec6da266cd45934fb99b7be9))
+* **deps:** pin dependency @nestjs/schematics to 8.0.11 ([3d397ff](https://github.com/powerfulyang/cli/commit/3d397ff06b722351bf23f93b8d89d83f9f7458b8))
+* **deps:** update dependency zx to v7 ([#61](https://github.com/powerfulyang/cli/issues/61)) ([ad72aed](https://github.com/powerfulyang/cli/commit/ad72aed99b70b2339a9d20368eb43ca314a9f59e))
+* **deps:** update dependency zx to v7.0.3 ([ec4d0ba](https://github.com/powerfulyang/cli/commit/ec4d0ba432ebb0dbd36633b7da7a10446859be1c))
+* **deps:** update dependency zx to v7.0.4 ([e512f38](https://github.com/powerfulyang/cli/commit/e512f38c5f403f2301be35498e7670fe6f13fda2))
+
 ## [1.3.1](https://github.com/powerfulyang/cli/compare/v1.3.0...v1.3.1) (2022-06-27)
 
 
