@@ -35,7 +35,7 @@
   "devDependencies": {
     "@powerfulyang/lint": "2.0.2",
     "@types/inquirer": "8.2.1",
-    "ts-node": "10.8.1"
+    "ts-node": "10.8.2"
   },
   "dependencies": {
     "@powerfulyang/utils": "1.4.4",
