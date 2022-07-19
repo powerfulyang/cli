@@ -40,7 +40,7 @@
   "dependencies": {
     "@powerfulyang/utils": "1.4.4",
     "commander": "9.4.0",
-    "inquirer": "9.0.1",
+    "inquirer": "9.0.2",
     "nest-cli": "0.0.5",
     "zx": "7.0.7"
   }
