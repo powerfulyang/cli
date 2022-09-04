@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.6.0](https://github.com/powerfulyang/cli/compare/v1.4.0...v1.6.0) (2022-09-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency commander to v9.4.0 ([34760fe](https://github.com/powerfulyang/cli/commit/34760fe1a37fdbc42387d4f827f39c66c374fc3e))
+* **deps:** update dependency inquirer to v9.0.1 ([e65b268](https://github.com/powerfulyang/cli/commit/e65b26886a10dd4df47397462616184fca0b2853))
+* **deps:** update dependency inquirer to v9.0.2 ([de0571a](https://github.com/powerfulyang/cli/commit/de0571a4dce0c9afea652592f1c0c675ea1dd162))
+* **deps:** update dependency inquirer to v9.1.0 ([13defc7](https://github.com/powerfulyang/cli/commit/13defc7151f7f16a10798af25d9705926eecad76))
+* **deps:** update dependency inquirer to v9.1.1 ([bbefd7d](https://github.com/powerfulyang/cli/commit/bbefd7dc2fd27faa14b5be1d03b2c6e06fba2f26))
+* **deps:** update dependency zx to v7.0.5 ([4d73eb1](https://github.com/powerfulyang/cli/commit/4d73eb1f76f5feb2654a68edbe9ee7ce9263bff7))
+* **deps:** update dependency zx to v7.0.6 ([1cba816](https://github.com/powerfulyang/cli/commit/1cba8161ccf5b37034e99f15266ebe8064df7d8c))
+* **deps:** update dependency zx to v7.0.7 ([082ccd7](https://github.com/powerfulyang/cli/commit/082ccd77ea0ad7df75baabe4e52e608aa5572c0f))
+* **deps:** update dependency zx to v7.0.8 ([dc13427](https://github.com/powerfulyang/cli/commit/dc13427b1655f42844a889ac525349a274d0d1d9))
+* error package.json detect ([67a741c](https://github.com/powerfulyang/cli/commit/67a741c15e50fb8a95b81cdcfa7b5fa3b978f3f6))
+
 ## [1.4.0](https://github.com/powerfulyang/cli/compare/v1.3.1...v1.4.0) (2022-06-30)
 
 
