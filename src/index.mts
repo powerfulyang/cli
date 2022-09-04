@@ -7,7 +7,8 @@ import { CommandLoader } from './command/CommandLoader.mjs';
 $.verbose = false;
 
 const program = new Command();
-const pkgStr = fs.readFileSync('./package.json', 'utf8');
+const pkgPath = new URL('../package.json', import.meta.url);
+const pkgStr = fs.readFileSync(pkgPath, 'utf-8');
 const pkg = JSON.parse(pkgStr);
 
 program
@@ -18,7 +19,7 @@ program
     ${green('2. nest.js cli generate commands')}
         `,
   )
-  .version(`us4ever@${yellow(pkg.version)}`, '-v, --version', 'Output the current version.')
+  .version(`${yellow(pkg.version)}`, '-v, --version', 'Output the current version.')
   .usage(`${blue('<command>')} ${green('[options]')}`)
   .helpOption('-h, --help', 'Output usage information.');
 

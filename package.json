@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/powerfulyang/cli#readme",
   "devDependencies": {
-    "@powerfulyang/lint": "2.0.2",
+    "@powerfulyang/lint": "3.1.0",
     "@types/inquirer": "9.0.1",
     "ts-node": "10.9.1"
   },
