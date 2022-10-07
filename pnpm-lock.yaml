@@ -8,14 +8,14 @@ specifiers:
   inquirer: 9.1.3
   nest-cli: 0.0.5
   ts-node: 10.9.1
-  zx: 7.1.0
+  zx: 7.1.1
 
 dependencies:
   '@powerfulyang/utils': 1.5.0_yzt46al3aifnexifjjdb4dxxja
   commander: 9.4.1
   inquirer: 9.1.3
   nest-cli: 0.0.5
-  zx: 7.1.0
+  zx: 7.1.1
 
 devDependencies:
   '@powerfulyang/lint': 3.1.0_s5ojjbx2isjkawqptqpitvy25q
@@ -1231,7 +1231,7 @@ packages:
   /@types/fs-extra/9.0.13:
     resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
     dependencies:
-      '@types/node': 18.7.23
+      '@types/node': 18.8.3
     dev: false
 
   /@types/graceful-fs/4.1.5:
@@ -1293,12 +1293,8 @@ packages:
     resolution: {integrity: sha512-0b+utRBSYj8L7XAp0d+DX7lI4cSmowNaaTkk6/1SKzbKkG+doLuPusB9EOvzLJ8ahJSk03bTLIL6cWaEd4dBKA==}
     dev: true
 
-  /@types/node/18.7.23:
-    resolution: {integrity: sha512-DWNcCHolDq0ZKGizjx2DZjR/PqsYwAcYUJmfMWqtVU2MBMG5Mo+xFZrhGId5r/O5HOuMPyQEcM6KUBp5lBZZBg==}
-
   /@types/node/18.8.3:
     resolution: {integrity: sha512-0os9vz6BpGwxGe9LOhgP/ncvYN5Tx1fNcd2TM3rD/aCGBkysb+ZWpXEocG24h6ZzOi13+VB8HndAQFezsSOw1w==}
-    dev: true
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -1345,7 +1341,7 @@ packages:
   /@types/through/0.0.30:
     resolution: {integrity: sha512-FvnCJljyxhPM3gkRgWmxmDZyAQSiBQQWLI0A0VFL0K7W1oRUrPJSqNO0NvTnLkBcotdlp3lKvaT0JrnyRDkzOg==}
     dependencies:
-      '@types/node': 18.7.23
+      '@types/node': 18.8.3
     dev: true
 
   /@types/tough-cookie/4.0.2:
@@ -7080,14 +7076,14 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zx/7.1.0:
-    resolution: {integrity: sha512-f3+EvObSf5AQOr8KTRcZkDyG73YtCSY2eqTAjT029qvXcCkYGRbZuvrMfI/b3k972yY8Z3vG+qCVPLfvtEf6Qw==}
+  /zx/7.1.1:
+    resolution: {integrity: sha512-5YlTO2AJ+Ku2YuZKSSSqnUKuagcM/f/j4LmHs15O84Ch80Z9gzR09ZK3gR7GV+rc8IFpz2H/XNFtFVmj31yrZA==}
     engines: {node: '>= 16.0.0'}
     hasBin: true
     dependencies:
       '@types/fs-extra': 9.0.13
       '@types/minimist': 1.2.2
-      '@types/node': 18.7.23
+      '@types/node': 18.8.3
       '@types/ps-tree': 1.1.2
       '@types/which': 2.0.1
       chalk: 5.0.1
