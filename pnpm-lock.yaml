@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@powerfulyang/lint': 3.1.3
-  '@powerfulyang/utils': 1.9.1
+  '@powerfulyang/utils': 1.9.2
   '@types/inquirer': 9.0.3
   commander: 9.5.0
   inquirer: 9.1.5
@@ -11,7 +11,7 @@ specifiers:
   zx: 7.2.1
 
 dependencies:
-  '@powerfulyang/utils': 1.9.1
+  '@powerfulyang/utils': 1.9.2
   commander: 9.5.0
   inquirer: 9.1.5
   nest-cli: 0.0.5
@@ -1022,8 +1022,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@powerfulyang/utils/1.9.1:
-    resolution: {integrity: sha512-c7610AUe8bbl3qg3s/Gw0KRsvVOafVVyen5x1YwtNGz/GAxVBKvkNOAUfH0Gp5eEdeH6GyH51jNv2rN8/HpNNg==}
+  /@powerfulyang/utils/1.9.2:
+    resolution: {integrity: sha512-mkMTat6mZRyWWZhmfu8Z4ekQpLud5JErtAI2gJ5I5CW3kX8+7aNIlQtpiEsQZrKN1NqeGvzuhuufHrLepxjEFA==}
     dependencies:
       mdast-util-to-markdown: 1.5.0
       qrcode-generator: 1.4.4
@@ -1031,13 +1031,11 @@ packages:
       rehype-parse: 8.0.4
       rehype-remark: 9.1.2
       rehype-remove-comments: 5.0.0
-      rehype-sanitize: 5.0.1
       remark-gfm: 3.0.1
       remark-stringify: 10.0.2
       rxjs: 7.8.0
       string-width: 5.1.2
       unified: 10.1.2
-      unist-util-visit: 4.1.2
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -3848,12 +3846,6 @@ packages:
       hast-util-has-property: 2.0.1
       hast-util-is-body-ok-link: 2.0.0
       hast-util-is-element: 2.1.3
-    dev: false
-
-  /hast-util-sanitize/4.1.0:
-    resolution: {integrity: sha512-Hd9tU0ltknMGRDv+d6Ro/4XKzBqQnP/EZrpiTbpFYfXv/uOhWeKc+2uajcbEvAEH98VZd7eII2PiXm13RihnLw==}
-    dependencies:
-      '@types/hast': 2.3.4
     dev: false
 
   /hast-util-to-mdast/8.4.1:
@@ -6689,14 +6681,6 @@ packages:
       hast-util-is-conditional-comment: 2.0.0
       unified: 10.1.2
       unist-util-filter: 4.0.1
-    dev: false
-
-  /rehype-sanitize/5.0.1:
-    resolution: {integrity: sha512-da/jIOjq8eYt/1r9GN6GwxIR3gde7OZ+WV8pheu1tL8K0D9KxM2AyMh+UEfke+FfdM3PvGHeYJU0Td5OWa7L5A==}
-    dependencies:
-      '@types/hast': 2.3.4
-      hast-util-sanitize: 4.1.0
-      unified: 10.1.2
     dev: false
 
   /remark-gfm/3.0.1:
