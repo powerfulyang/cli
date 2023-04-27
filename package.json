@@ -38,7 +38,7 @@
     "ts-node": "10.9.1"
   },
   "dependencies": {
-    "@powerfulyang/utils": "1.10.0",
+    "@powerfulyang/utils": "1.10.2",
     "commander": "9.5.0",
     "inquirer": "9.2.0",
     "nest-cli": "0.0.5",
