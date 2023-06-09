@@ -1,5 +1,38 @@
 # Changelog
 
+## [1.6.1](https://github.com/powerfulyang/cli/compare/v1.6.0...v1.6.1) (2023-06-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @powerfulyang/utils to v1.10.0 ([853bf98](https://github.com/powerfulyang/cli/commit/853bf98e8a112356514f23f6f4e958c90277cdfa))
+* **deps:** update dependency @powerfulyang/utils to v1.10.2 ([df06820](https://github.com/powerfulyang/cli/commit/df068204914f3aa22d0516cd6273dcf024d3f61f))
+* **deps:** update dependency @powerfulyang/utils to v1.5.0 ([0b997c5](https://github.com/powerfulyang/cli/commit/0b997c55d5e72b12224684092982651c896100bd))
+* **deps:** update dependency @powerfulyang/utils to v1.6.0 ([affde94](https://github.com/powerfulyang/cli/commit/affde940658487ad022954e9b4c55b4f08eed7fe))
+* **deps:** update dependency @powerfulyang/utils to v1.7.1 ([64279b9](https://github.com/powerfulyang/cli/commit/64279b9ed5cf8669ab4543a5cf745f4c57e1f456))
+* **deps:** update dependency @powerfulyang/utils to v1.7.2 ([d457265](https://github.com/powerfulyang/cli/commit/d4572654bb520d8ec59ea3f2a2c63bd12301ba57))
+* **deps:** update dependency @powerfulyang/utils to v1.9.1 ([2f0329c](https://github.com/powerfulyang/cli/commit/2f0329c06ef17313d3d4424a3c286a216ddb1498))
+* **deps:** update dependency @powerfulyang/utils to v1.9.2 ([0843254](https://github.com/powerfulyang/cli/commit/0843254e881b5641df3cb4108b4f88e96d236b6e))
+* **deps:** update dependency commander to v9.4.1 ([b97417b](https://github.com/powerfulyang/cli/commit/b97417b270c01c339c4343b57874fdf73320e11c))
+* **deps:** update dependency commander to v9.5.0 ([246128c](https://github.com/powerfulyang/cli/commit/246128c600c4ea9762c2160b4d6175d952d10d74))
+* **deps:** update dependency inquirer to v9.1.2 ([a0a11bf](https://github.com/powerfulyang/cli/commit/a0a11bf8089aeaf0c609522285487894e626b64f))
+* **deps:** update dependency inquirer to v9.1.3 ([3fff209](https://github.com/powerfulyang/cli/commit/3fff209d7394dffc34bf1c1e48acb90f2e9c3798))
+* **deps:** update dependency inquirer to v9.1.4 ([b1dfd8e](https://github.com/powerfulyang/cli/commit/b1dfd8e235f780d95a64e43677aa2647c7fbf1b3))
+* **deps:** update dependency inquirer to v9.1.5 ([c92b4d5](https://github.com/powerfulyang/cli/commit/c92b4d549ca60777b2747bb88d78c2e078dc0b17))
+* **deps:** update dependency inquirer to v9.2.0 ([9cebf77](https://github.com/powerfulyang/cli/commit/9cebf770d303d967c35964930e2c3fd7923f9da6))
+* **deps:** update dependency inquirer to v9.2.1 ([348ea24](https://github.com/powerfulyang/cli/commit/348ea247351efbefb0b4a3b796b993a0ab0b1ac5))
+* **deps:** update dependency inquirer to v9.2.2 ([27567e3](https://github.com/powerfulyang/cli/commit/27567e3bc12566625146528fbf2b9549d024a02d))
+* **deps:** update dependency inquirer to v9.2.3 ([390a77d](https://github.com/powerfulyang/cli/commit/390a77dccadc9e2f493124614e87999feb91e6fc))
+* **deps:** update dependency inquirer to v9.2.4 ([d2e63d8](https://github.com/powerfulyang/cli/commit/d2e63d89e29c1ca5669b6f9b4987c88e33ab9cac))
+* **deps:** update dependency inquirer to v9.2.5 ([e530e2b](https://github.com/powerfulyang/cli/commit/e530e2bb805fe52322b2dffc7252bc93d26f5c8f))
+* **deps:** update dependency inquirer to v9.2.6 ([7f0bd5f](https://github.com/powerfulyang/cli/commit/7f0bd5fb1b508f33c3ce48ca046bb400d244d7e2))
+* **deps:** update dependency inquirer to v9.2.7 ([24df49d](https://github.com/powerfulyang/cli/commit/24df49d76b4f18d42523f1fa553018b0ed199d9b))
+* **deps:** update dependency zx to v7.1.0 ([15db068](https://github.com/powerfulyang/cli/commit/15db068036e69a3276907bf11c867e46af39dc93))
+* **deps:** update dependency zx to v7.1.1 ([9b107b3](https://github.com/powerfulyang/cli/commit/9b107b3dd97dd49b39b4b6198e73919ffc7bd72b))
+* **deps:** update dependency zx to v7.2.0 ([d9dc37f](https://github.com/powerfulyang/cli/commit/d9dc37f2314e996f476fb44763d50496135b1fad))
+* **deps:** update dependency zx to v7.2.1 ([f0ea092](https://github.com/powerfulyang/cli/commit/f0ea09208271767659f1f89097bfe535ec0ace20))
+* **deps:** update dependency zx to v7.2.2 ([b71bc22](https://github.com/powerfulyang/cli/commit/b71bc22d0f45d36d6109e65632de11121e91f572))
+
 ## [1.6.0](https://github.com/powerfulyang/cli/compare/v1.4.0...v1.6.0) (2022-09-04)
 
 
